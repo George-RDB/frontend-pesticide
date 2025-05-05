@@ -1,3 +1,4 @@
+axios.get('https://backend-pesticide.onrender.com/api/products')
 import React, { useState, useEffect } from 'react';
 
 function App() {
@@ -36,7 +37,7 @@ const formatList = (text) => {
       Object.entries(filters).forEach(([key, value]) => {
         if (value) params.append(key, value);
       });
-      const res = await fetch(`/produse/cautare?${params.toString()}`);
+      const res = await fetch(`https://backend-pesticide.onrender.com/produse/cautare?${params.toString()}`);
       if (!res.ok) throw new Error('Error fetching');
       const data = await res.json();
       setProduse(data);
