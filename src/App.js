@@ -37,7 +37,7 @@ const formatList = (text) => {
       Object.entries(filters).forEach(([key, value]) => {
         if (value) params.append(key, value);
       });
-      const res = await fetch(`https://backend-pesticide.onrender.com/produse/cautare?${params.toString()}`);
+      const res = await fetch('https://backend-pesticide.onrender.com/produse/cautare');
       if (!res.ok) throw new Error('Error fetching');
       const data = await res.json();
       setProduse(data);
