@@ -1,0 +1,65 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f0f0;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #006837;
+}
+
+input, button, .react-select-container {
+  margin: 1px;
+padding: 6px;
+  border-radius: 6px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #006837;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: azure;
+}
+
+th, td {
+  border: 1px solid #dee2e6;
+  padding: 2px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background-color: #FFEF00;
+  color: #333;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  list-style: none;
+  gap: 8px;
+}
+
+.pagination li {
+  cursor: pointer;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.pagination li.active {
+  background-color: #006837;
+  color: white;
+  border: none;
+}
