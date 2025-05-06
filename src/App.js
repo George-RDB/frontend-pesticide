@@ -1,5 +1,8 @@
-axios.get('https://backend-pesticide.onrender.com/api/products')
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+axios.get('https://backend-pesticide.onrender.com/api/products')
+
 
 function App() {
   const [produse, setProduse] = useState([]);
@@ -11,6 +14,11 @@ function App() {
     daunator: '',
   });
   const [error, setError] = useState(null);
+  useEffect(() => {
+    axios.get('https://backend-pesticide.onrender.com/api/products')
+      .then((res) => setProduse(res.data))
+      .catch((err) => setError('Eroare la interogare'));
+  }, []);
 const formatDoze = (text) => {
   const values = text
     ?.split('|')                        // Împărțim doar după |
